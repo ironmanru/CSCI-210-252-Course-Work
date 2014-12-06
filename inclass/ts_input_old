@@ -1,0 +1,20 @@
+#!/bin/bash
+# ts_input
+# sassenbergm
+echo $TD
+echo -n $TD " ">>$HOME/public_html/timesheet.log
+
+dialog --inputbox "Enter your name:" 8 40 2>>$HOME/public_html/timesheet.log
+echo -n "| ">>$HOME/public_html/timesheet.log
+clear
+
+echo "Enter project name and description:"
+read INPVAR
+echo $INPVAR >>$HOME/public_html/timesheet.log
+#Add to log file
+
+#Add to HTML file
+$HOME/public_html/ts_mkweb
+
+echo "Done."
+

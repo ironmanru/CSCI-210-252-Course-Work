@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Matthew Sassenberg Lab 2
+	</title>
+</head>
+<body>
+	<h1> JavaScript the Good Parts</h1>
+	<p> Matthew Sassenberg's Notes</p>
+<pre><code>
+	/** Influences **/
+	
+	//JavaScript is influenced from many other programming languages
+	
+	/*
+	Self:
+		-prototypal inheritance
+		-dynamic objects
+	*/
+	
+	/*
+	Scheme:
+		-lambda
+		-loose typing
+	*/
+	
+	/*
+	Java:
+		-syntax
+		-conventions
+	*/
+	
+	/*
+	Perl:
+		-regular expressions
+	*/
+	
+	//Javascript takes some of the best things from these languages and it's what makes JavaScript great
+	
+	/** Bad Parts **/
+	
+	/*The bad parts of JavaScript:
+		-Global Variables
+		-Symbol + adds and concatenates
+		-Semicolon insertion
+		-typeof
+		-with and eval
+		-phony arrays
+		-== and !=
+		-false, null, undefined, NaN
+	*/
+	
+	/** Global Variables **/
+	
+	/*
+	You have to be careful about using Global Variables 
+	as object or function names because you never know 
+	when that name might be used again in a library or 
+	a different source of code. 
+	*/
+	
+	var names = ['zero', 'one', 'two',
+		'three', 'four', five', 'six',
+		'seven', 'eight', 'nine'];
+	
+	var digit_name = function (n) {
+		return names[n];
+	};
+		
+	alert(digit_name(3));  // 'three'
+	
+	/*
+	Here the names variable could be a global variable used
+	in other functions or libraries
+	*/
+	
+	/** Global Variables Fixed **/
+	
+	var digit_name = function () {
+		var names = ['zero', 'one', 'two',
+		'three', 'four', five', 'six',
+		'seven', 'eight', 'nine'];
+		
+		return function (n) {
+			return names[n];
+		};
+	}();
+	alert(digit_name(3)); // 'three'
+	
+	/*
+	Here the function returns another function then the outer function
+	gets returned immediately. This prevents any issues with other "names" 
+	variables because it only accesses the names variable in the digit_name function. 
+	*/
+	
+	/** Style Isn't Subjective **/
+	
+	//Running the code below will cause a SILENT ERROR
+	
+	return
+	{
+		ok: false
+	};
+	
+	/*
+	Javascript will add a semicolon after return causing 
+	it to return noothing, no object or error just an empty return.
+	*/
+	
+	//The code below will cause no errors and is the correct style for JavaScript
+	
+	return {
+		ok: true
+	};
+	
+	/** Evaluating JavaScript **/
+	
+	//He made a good recommendation to use JSLint.com
+	
+	/* 
+	JSLint.com allows you to paste in your or someone else's
+	JavaScript code and it will parse the code for any errors.
+	Using this tool will help you make your programs perfect.
+	*/
+	
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,16 @@
+#!/bin/bash
+# midterm_sam
+# sassenbergm
+
+x=11
+y=19
+w=$((x+$y))
+echo $w
+
+# for x in 2 3 4 5 6
+# do
+ # echo $x
+ # let y=$y+$x
+#done
+#echo $y
+

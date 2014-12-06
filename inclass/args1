@@ -1,0 +1,21 @@
+#!/bin/bash
+# args1
+clear
+# last command ran
+echo $_
+# current pid
+echo $$
+# name of script
+echo $0
+# all command line args
+echo $*
+# count command line args
+echo $#
+# 0 = success 1 = fail
+echo $?
+# move command line args left
+shift
+shift
+shift
+echo $1 $2 $3 $4 $5 $6 $7 $8 $9
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+# fortune_mkweb
+# sassenbergm
+{ echo "$HDR";
+cat "$HOME"/public_html/fortune.txt;
+echo "FTR"; } >  "$HOME"/public_html/fortune.html
+#eof
+

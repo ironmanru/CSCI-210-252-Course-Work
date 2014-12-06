@@ -1,0 +1,17 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE "visitors" (
+  "ip" char(16) NOT NULL,
+  "country_code" char(2) DEFAULT NULL,
+  "country_name" char(25) DEFAULT NULL,
+  "region_code" char(10) DEFAULT NULL,
+  "region_name" char(15) DEFAULT NULL,
+  "city" char(15) DEFAULT NULL,
+  "zipcode" char(10) DEFAULT NULL,
+  "latitude" char(10) DEFAULT NULL,
+  "longitude" char(10) DEFAULT NULL,
+  "metro_code" char(3) DEFAULT NULL,
+  "area_code" char(3) DEFAULT NULL
+);
+COMMIT;
+

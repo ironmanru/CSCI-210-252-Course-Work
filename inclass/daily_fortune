@@ -1,0 +1,7 @@
+#!/bin/bash
+# daily_fortune
+# dkp
+fortune > /home/sassenbergm/inclass/fortune.txt
+/home/sassenbergm/inclass/fortune_mkweb
+cat /home/sassenbergm/inclass/fortune.txt | mail -s"Daily Fortune" msassenberg@sbcglobal.net
+echo +%Y%m%d

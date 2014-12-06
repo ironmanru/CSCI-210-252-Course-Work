@@ -1,0 +1,30 @@
+#!/bin/bash
+# days_alive
+# lab 5
+# sassenbergm
+
+# today epoch time
+SDATE=$(date +%s)
+# dob epoch time
+EDATE=$(date -d '05/09/1992' +%s)
+# sec alive
+SALIVE=$(($SDATE - $EDATE))
+DALIVE=$(($SALIVE/86400))
+TENDAYS=$(($SDATE + 864000000))
+TDATE=$(date -d '@'$TENDAYS'' +%m/%d/%Y)
+
+echo "You have been alive " $SALIVE "seconds"
+echo "You have been alive " $DALIVE "days"
+echo "10000 days for you is " $TDATE
+
+##echo -n "Enter your first name: "
+##read NAME1
+##echo -n "Enter your first number: "
+##read NUM1
+##echo -n "Enter your second number: "
+##read NUM2
+##SUM1=$((NUM1+NUM2))
+
+##echo "Hello $NAME1, the sum of the two numbers is: $SUM1"
+##echo $(date +%s) $NAME1 $SUM1 >> $HOME/inclass/script1.log
+

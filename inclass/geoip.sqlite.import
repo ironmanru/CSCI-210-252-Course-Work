@@ -1,0 +1,6 @@
+#!/bin/bash
+# geoip.create.import
+
+cat first.pass | tr ',' '|' > last.pass
+echo ".import last.pass visitors" | sqlite3 ipvisitors.sqlite
+echo "select ip,latitude,longitude from visitors;"  | sqlite3 ipvisitors.sqlite

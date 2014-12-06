@@ -1,0 +1,7 @@
+sort my_access_log_copy | cut -fl -d" " | uniq |
+
+xzcat /home/access*.*z
+
+echo ".import last.pass visitors" | sqlite3 ipvisitors.sqlite
+bash getip.info > first.pass
+cat first.pass  
